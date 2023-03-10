@@ -1,0 +1,30 @@
+<html>
+        <body>
+            <form method= "post"  enctype="multipart/form-data" action="#">
+                <label>Leave Id<label>
+                <input type="text" value="%s" name="leaveid"><br>
+                <label>Staff Id<label>
+                <input type="text"  name="staffid"><br>
+                <label>Reason<label>
+                <textarea name="reason"></textarea><br>
+                <label>from Date<label>
+                <input type="date" name="from" id= "fromdate"><br>
+                <label>To Date<label>
+                <input type="date" name="to" id= "todate" onchange ="toatl()" ><br>
+                <label>Total Days<label>
+                <input type="text" name="total" id= "result"><br>
+                <input type="submit" value="submit" name="submit">
+            </form>
+            <script>
+            function total(){
+             var fromdate=new Date(document.getElemtById("fromdate").value);
+             var todate=new Date(document.getElemtById("todate").value);
+             var totalday = math.abs(todate-fromdate);
+             return document.getElementById("result").innerHTML = +totalday;
+            }
+            </script>
+
+
+             
+        </body>
+        </html>
