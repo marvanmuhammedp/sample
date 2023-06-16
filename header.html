@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example Header</title>
+  <style>
+    /* Header styles */
+	body{
+		height: 1000px;
+    width: 100%;
+		background-color: rgb(241, 211, 211);
+   
+	}
+    header {
+      background-color: #5e96f1;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+    header span {
+      font-size: 32px;
+      margin-right: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    header ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    header li {
+      margin-right: 10px;
+    }
+    header li a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-size: 16px;
+    }
+	/* Nav styles */
+	nav {
+      background-color: #d3e4f5;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    nav img {
+      max-height: 50px;
+      margin-right: 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    nav li {
+      margin-right: 20px;
+      position: relative;
+    }
+    nav li:hover ul {
+      display: block;
+	  color: #96eb0f;
+    }
+    nav a {
+      color: rgb(55, 14, 240);
+      text-decoration: none;
+      font-size: 16px;
+      display: block;
+      padding: 10px;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f2f2f2;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1;
+      min-width: 200px;
+    }
+    nav ul ul li {
+      margin: 0;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+    }
+    nav ul ul li:last-child {
+      border-bottom: none;
+    }
+    nav ul ul ul {
+      left: 100%;
+      top: 0;
+    }
+	
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .social-icons li a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+       </style>
+    </head>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>College Website Footer</title>
+      <style>
+		/* Style for image gallery */
+		.container {
+			background-color: rgb(243, 218, 218);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 20px;
+		}
+		.box {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			margin-bottom: 20px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.box:hover {
+			transform: scale(1.1);
+		}
+		.box img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.box .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: all 0.3s ease;
+		}
+		.box:hover .overlay {
+			opacity: 1;
+		}
+        /* CSS for footer */
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .footer {
+		  background-color: #585c63;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          font-size: 14px;
+		  z-index: 1;
+        }
+        
+        .footer a {
+          color: #fff;
+          text-decoration: none;
+        }
+        
+        .footer a:hover {
+          text-decoration: underline;
+        }
+        
+        /* CSS for responsive design */
+        @media (max-width: 767px) {
+          .footer {
+            font-size: 12px;
+            padding: 15px;
+          }
+        }
+		 /* Styles for the carousel container */
+		 .carousel {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Styles for the carousel images */
+      .carousel img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      /* Style for the active image */
+      .carousel img.active {
+        opacity: 1;
+      }
+
+      /* Styles for the previous and next buttons */
+      .carousel .prev,
+      .carousel .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+        cursor: pointer;
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      /* Styles for the previous button */
+      .carousel .prev {
+        left: 0;
+      }
+
+      /* Styles for the next button */
+      .carousel .next {
+        right: 0;
+      }
+
+      /* Styles for the previous and next buttons on hover */
+      .carousel .prev:hover,
+      .carousel .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <span></span>
+    <h1>Study World College of Egineering</h1>
+    <ul>
+		<li></li><li></li><li></li><li></li>
+      <li><a href="#">+91 7559883432</a></li>
+      <li><a href="#">CoimbathurSwehg.com</a></li>
+    </ul>
+  </header>
+  <nav>
+    <img src="logo-swce.png" alt="College logo">
+    <ul>
+      <li>
+        <a href="#">About</a>
+        <ul>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Vision</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+        <ul>
+          <li><a href="#">Phone</a></li>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Login</a>
+        <ul>
+          <li><a href="#">Admin</a></li>
+          <li><a href="#">Staff</a></li>
+          <li>
+            <a href="#">Student</a>
+            <ul>
+              <li><a href="#">Undergraduate</a></li>
+              <li><a href="#">Graduate</a></li>
+              <li><a href="#">Continuing Education</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="carousel">
+    <img src="college1.jpg" alt="Image 1" class="active" />
+    <img src="college2.jpg" alt="Image 2" />
+    <img src="college3.jpg" alt="Image 3" />
+    <img src="college4.jpg" alt="Image 4" />
+    <div class="prev">&#10094;</div>
+    <div class="next">&#10095;</div>
+    </div>
+    <div class="container">
+    <div class="box">
+      <img src="imagegallery1.jpg" alt="Image 1">
+      <div class="overlay">
+        <p>B.E Mechanical Engineering</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="imagegallery2.jpg" alt="Image 2">
+      <div class="overlay">
+        <p>B.E Electronics and Communication Engineering</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="imagegallery3.jpg" alt="Image 3">
+      <div class="overlay">
+        <p>B.E Electrical and Electronics Engineering</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="imagegallery4.jpg" alt="Image 4">
+      <div class="overlay">
+        <p>B.E Computer Science and Engineering</p>
+      </div>
+    </div>
+  </div>
+    <script>
+    const images = document.querySelectorAll(".carousel img");
+    const prevBtn = document.querySelector(".carousel .prev");
+    const nextBtn = document.querySelector(".carousel .next");
+    let currentImageIndex = 0;
+  
+    function showImage(index) {
+      images[currentImageIndex].classList.remove("active");
+      images[index].classList.add("active");
+      currentImageIndex = index;
+    }
+  
+    prevBtn.addEventListener("click", () => {
+      let index = currentImageIndex - 1;
+      if (index < 0) {
+      index = images.length - 1;
+      }
+      showImage(index);
+    });
+  
+    nextBtn.addEventListener("click", () => {
+      let index = currentImageIndex + 1;
+      if (index >= images.length) {
+      index = 0;
+      }
+      showImage(index);
+     
+      });
+    </script>
+  <footer class="footer">
+	<p>&copy; 2023 College Name. All rights reserved.</p>
+	<p>Address: 123 Main St, Anytown USA 12345</p>
+	<p>Email: info@college.edu | Phone: 1-800-COLLEGE</p>
+	<p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+  </footer>
+  
+</body>
+</html>
